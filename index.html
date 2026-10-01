@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="Body">
+
+        <h1>Feedback Form</h1>
+        <hr>
+        <br>
+
+        <form action="" method="post" id="Form">
+
+            <b>Name:</b><br>
+            <input class="ff" id="name" type="text"
+                placeholder="Enter Your Name" required>
+
+            <br><br>
+
+            <b>Email:</b><br>
+            <input class="ff" id="email" type="email"
+                placeholder="Enter Your Email" required>
+
+            <br><br>
+
+            <b>Phone No.:</b><br>
+            <input class="ff" id="phone" type="tel"
+                placeholder="Enter Your Phone Number" required>
+
+            <br><br>
+
+            <b>Experience:</b><br>
+
+            <textarea class="message" id="message"
+                placeholder="Tell about your experience..."
+                rows="5" cols="52" required></textarea>
+
+            <br><br>
+
+            <div id="Stars" >
+
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+
+                <p id="ratingValue"></p>
+
+            </div>
+
+            <button type="submit" id="Button">Submit</button>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
