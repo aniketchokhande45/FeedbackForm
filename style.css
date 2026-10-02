@@ -1,0 +1,88 @@
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, blue, red);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Body {
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 25px;
+    background: linear-gradient(to bottom right,
+            rgb(206, 41, 41),
+            rgb(53, 53, 195));
+}
+
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+b {
+    color: white;
+}
+
+.ff {
+    width: 400px;
+    padding: 8px;
+    transition: 0.6s;
+}
+
+.ff:hover {
+    transform: scale(1.05);
+}
+
+textarea {
+    transition: 0.6s;
+}
+
+textarea:hover {
+    transform: scale(1.05);
+}
+
+#Stars {
+    text-align: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.star {
+    color: silver;
+}
+
+.star.active {
+    color: gold;
+}
+
+#ratingValue {
+    color: white;
+    font-size: 18px;
+}
+
+#Button {
+    display: block;
+    margin: auto;
+
+    border: 3px solid black;
+    border-radius: 10px;
+
+    background-color: rgb(173, 173, 34);
+
+    font-size: 16px;
+
+    padding: 10px 20px;
+
+    transition: 0.5s;
+}
+
+#Button:hover {
+    transform: scale(1.2);
+    background-color: limegreen;
+}
