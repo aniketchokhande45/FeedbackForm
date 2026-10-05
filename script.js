@@ -1,46 +1,47 @@
 let form = document.getElementById("Form");
 
+let selectedRating = 0;
+
 form.addEventListener("submit", function (event) {
 
-    event.preventDefault();
+   
 
     let name = document.getElementById("name").value;
-
     let email = document.getElementById("email").value;
-
     let phone = document.getElementById("phone").value;
-
     let message = document.getElementById("message").value;
 
     if (name === "" ||
         email === "" ||
         phone === "" ||
         message === "") {
-
+			event.preventDefault();
         alert("All fields are required!");
         return;
     }
 
-    if (!email.includes("@") ||
-        !email.includes(".")) {
-
-        alert("Wrong email!");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+		event.preventDefault();
+        alert("Please enter a valid email address!");
         return;
     }
 
-    if (phone.length !== 10 ||
-        isNaN(phone)) {
-
-        alert("Wrong phone number!");
+    if (!/^[0-9]{10}$/.test(phone)) {
+		event.preventDefault();
+        alert("Please enter a valid 10-digit phone number!");
         return;
     }
 
-    alert("Form submission is done.");
+    if (selectedRating === 0) {
+		event.preventDefault();
+        alert("Please select a rating!");
+        return;
+    }
+
+
 });
 
 let stars = document.querySelectorAll(".star");
-
-let ratingValue = document.getElementById("ratingValue");
 
 stars.forEach(function (star) {
 
@@ -48,19 +49,17 @@ stars.forEach(function (star) {
 
         let value = this.getAttribute("data-value");
 
-        ratingValue.textContent =
-            // "Rating: " + value;
+        selectedRating = value;
+        document.getElementById("rating").value = value;
 
         stars.forEach(function (s) {
-
             s.classList.remove("active");
-
         });
 
         for (let i = 0; i < value; i++) {
-
             stars[i].classList.add("active");
-
         }
+
     });
+
 });
