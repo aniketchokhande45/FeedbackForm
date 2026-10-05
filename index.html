@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,43 +16,43 @@
         <hr>
         <br>
 
-        <form action="" method="post" id="Form">
+        <form action="FeedbackServlet" method="post" id="Form">
 
             <b>Name:</b><br>
-            <input class="ff" id="name" type="text"
+            <input class="ff" id="name" name= "name" type="text"
                 placeholder="Enter Your Name" required>
 
             <br><br>
 
             <b>Email:</b><br>
-            <input class="ff" id="email" type="email"
+            <input class="ff" id="email" name="email" type="email"
                 placeholder="Enter Your Email" required>
 
             <br><br>
 
             <b>Phone No.:</b><br>
-            <input class="ff" id="phone" type="tel"
+            <input class="ff" id="phone" name="phone" type="tel"
                 placeholder="Enter Your Phone Number" required>
 
             <br><br>
 
             <b>Experience:</b><br>
 
-            <textarea class="message" id="message"
+            <textarea class="message" name="message" id="message"
                 placeholder="Tell about your experience..."
                 rows="5" cols="52" required></textarea>
 
             <br><br>
 
-            <div id="Stars" >
+            <input type="hidden" name="rating" id="rating">
 
+            <div id="Stars" >
+                
                 <span class="star" data-value="1">&#9733;</span>
                 <span class="star" data-value="2">&#9733;</span>
                 <span class="star" data-value="3">&#9733;</span>
                 <span class="star" data-value="4">&#9733;</span>
                 <span class="star" data-value="5">&#9733;</span>
-
-                <p id="ratingValue"></p>
 
             </div>
 
